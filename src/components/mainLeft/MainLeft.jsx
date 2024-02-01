@@ -1,13 +1,7 @@
 "use client";
+import Image from "next/image";
 import { useEffect, useState } from "react";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionItemHeading,
-  AccordionItemButton,
-  AccordionItemPanel,
-} from "react-accessible-accordion";
-import "react-accessible-accordion/dist/fancy-example.css";
+import CategoryItem from "./categoryItem/CategoryItem";
 
 const MainLeft = () => {
   const [data, setData] = useState([]);
@@ -25,6 +19,7 @@ const MainLeft = () => {
       <div className="bg-[#1fa45b] rounded-t-2xl  p-4">
         <h1 className="text-center text-white">Categories</h1>
       </div>
+
       <div className="flex justify-center">
         <input
           placeholder="Search by Dua Name"
@@ -34,28 +29,11 @@ const MainLeft = () => {
       </div>
 
       {/* category */}
-      <div className="mt-6">
-        <Accordion>
-          {data?.map((item) => {
-            return (
-              <AccordionItem key={item?.name}>
-                <AccordionItemHeading>
-                  <AccordionItemButton>
-                    What harsh truths do you prefer to ignore?
-                  </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>
-                  <p>
-                    Exercitation in fugiat est ut ad ea cupidatat ut in
-                    cupidatat occaecat ut occaecat consequat est minim minim
-                    esse tempor laborum consequat esse adipisicing eu
-                    reprehenderit enim.
-                  </p>
-                </AccordionItemPanel>
-              </AccordionItem>
-            );
-          })}
-        </Accordion>
+
+      <div className="p-2">
+        {data?.map((item, index) => {
+          return <CategoryItem key={index} item={item} />;
+        })}
       </div>
     </div>
   );

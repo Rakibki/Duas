@@ -15,11 +15,12 @@ const page = () => {
         <div className="w-full">
           <Navber />
         </div>
-        <div className="w-full gap-4 grid grid-cols-12 min-h-screen ">
+
+        <div className="w-full gap-4 grid grid-cols-11 min-h-screen ">
           <div className="col-span-3">
             <MainLeft />
           </div>
-          <div className="col-span-7">
+          <div className="col-span-6">
             <MainContainer />
           </div>
           <div className="col-span-2">
