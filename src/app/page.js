@@ -5,7 +5,7 @@ import Navber from "@/components/navber/Navber";
 import SideBer from "@/components/sideBer/SideBer";
 import React from "react";
 
-const page = () => {
+const Home = () => {
   return (
     <div className="mx-auto bg-[#e9ecf0] p-4 flex gap-2 max-w-[1300px]">
       <div className="min-h-screen w-[100px]">
@@ -32,4 +32,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Home;

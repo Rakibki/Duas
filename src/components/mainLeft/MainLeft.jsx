@@ -12,7 +12,6 @@ const MainLeft = () => {
       .then((result) => setData(result));
   }, []);
 
-  console.log(data);
 
   return (
     <div className="bg-white rounded-t-2xl min-h-screen">
@@ -32,7 +31,9 @@ const MainLeft = () => {
 
       <div className="p-2">
         {data?.map((item, index) => {
-          return <CategoryItem key={index} item={item} />;
+          return (
+            <CategoryItem className="cursor-pointer" key={index} item={item} />
+          );
         })}
       </div>
     </div>
